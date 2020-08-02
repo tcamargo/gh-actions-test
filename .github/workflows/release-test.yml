@@ -1,4 +1,4 @@
-name: gh-actions-test Releases
+name: gh-actions-test Single Releases
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   buildAndTag:
-    name: Build and Tag
+    name: Build and Release
     runs-on: ubuntu-latest
 
     steps:    
