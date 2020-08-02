@@ -21,6 +21,6 @@ jobs:
         tag: myrelease
         name: My Release
         gzip: false
-        allow_override: yes
+        allow_override: true
         files: >
           my-release.zip
