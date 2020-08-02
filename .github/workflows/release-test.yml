@@ -9,10 +9,7 @@ jobs:
   buildAndTag:
     name: Build and Tag
     runs-on: ubuntu-latest
-
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+    
     steps:    
     - uses: actions/checkout@v2
     - run: zip -9 my-release.zip my-file.txt
