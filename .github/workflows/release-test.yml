@@ -18,8 +18,8 @@ jobs:
       uses: meeDamian/github-release@2.0
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        tag: myrelease
-        name: My Release
+        tag: myrelease2
+        name: My Release2
         gzip: false
         allow_override: true
         files: >
