@@ -20,7 +20,6 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         tag: myrelease
         name: My Release
-        name:  My Release
         gzip: false
         allow_override: yes
         files: >
