@@ -24,3 +24,5 @@ jobs:
         allow_override: true
         files: >
           my-release.zip
+        body: |
+          Nightly build
