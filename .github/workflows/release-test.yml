@@ -18,6 +18,6 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         automatic_release_tag: myrelease
         prerelease: false
-        title: My Release
+        title: My Release 2
         files: |
           my-release.zip
