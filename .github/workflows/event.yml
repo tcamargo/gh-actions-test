@@ -1,0 +1,17 @@
+name: gh-actions-test event
+
+on:
+  workflow_run:
+    workflows: ["gh-actions-test Single Releases"]
+    branches: [master]
+    types:
+      - requested
+
+jobs:
+  uploadToBuildBot:
+    name: Upload to buildboot
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Get release
+      run: echo ${{ steps.release.outputs.automatic_releases_tag }}
