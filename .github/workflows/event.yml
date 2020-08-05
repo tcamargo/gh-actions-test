@@ -13,5 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Get release
-      run: echo ${{ steps.release.outputs.automatic_releases_tag }}
+      - run: |
+          echo "${{ toJson(github) }}"
+          echo "${{ toJson(job) }}"
+          echo "${{ toJson(steps) }}"
+          echo "${{ toJson(runner) }}"
+          echo "${{ toJson(strategy) }}"
+          echo "${{ toJson(matrix) }}"
