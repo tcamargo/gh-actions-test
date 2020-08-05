@@ -5,7 +5,7 @@ on:
     workflows: ["gh-actions-test Single Releases"]
     branches: [master]
     types:
-      - requested
+      - completed
 
 jobs:
   uploadToBuildBot:
