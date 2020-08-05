@@ -14,7 +14,6 @@ jobs:
     - uses: actions/checkout@v2
     - run: zip -9 my-release.zip my-file.txt
     - uses: marvinpinto/action-automatic-releases@latest
-      id: release
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         automatic_release_tag: myrelease
@@ -26,3 +25,17 @@ jobs:
       with:
         name: my-release
         path: my-release.zip
+
+  uploadFile:
+    name: Upload
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Get core from artifacts
+      uses: actions/download-artifact@v2
+        with:
+          name: my-release
+          path: .
+    - name: Display structure of downloaded files
+      run: ls -R
+      working-directory: .
