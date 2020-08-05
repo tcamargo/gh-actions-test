@@ -27,6 +27,7 @@ jobs:
         path: my-release.zip
 
   uploadFile:
+    needs: buildAndTag
     name: Upload
     runs-on: ubuntu-latest
 
