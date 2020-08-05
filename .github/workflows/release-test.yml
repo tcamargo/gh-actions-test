@@ -22,3 +22,7 @@ jobs:
         title: My Release 2
         files: |
           my-release.zip
+    - uses: actions/upload-artifact@v2
+      with:
+      name: my-release
+      path: my-release.zip
